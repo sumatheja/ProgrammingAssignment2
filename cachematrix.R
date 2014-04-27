@@ -6,21 +6,21 @@
 makeCacheMatrix <- function(x = matrix()) {
 
     k<-NULL
-    ##function to set the matrix value
     set<- function(y)
     {
         x<<-y
         k<<-NULL
     }
     
-    ##function to retirieve the fmatrix value
     get<-function() x
     
-    ##function to set the matrix inverse value
-    setInverse<-function(inverse) m<<-inverse
+    setInverse<-function(inverse) k<<-inverse
+    getInverse<-function() k
     
-    ##function to get the matrix inverse value 
-    getInverse<-function() m
+    list(set = set, get = get,
+             setInverse = setInverse,
+             getInverse = getInverse)
+
 
 }
 
