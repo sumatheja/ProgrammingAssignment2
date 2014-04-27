@@ -15,7 +15,11 @@ makeCacheMatrix <- function(x = matrix()) {
     get<-function() x
     
     setInverse<-function(inverse) k<<-inverse
-    getInverse<-function() k
+    getInverse<-function()
+    {
+            message("getting cached inverse matrix")
+            k
+    }
     
     list(set = set, get = get,
              setInverse = setInverse,
